@@ -2,10 +2,10 @@
 Contributors: awhurtado87
 Tags: telegram, contact, button, rrss
 Donate link: www.paypal.me/tupaginawebdesdecero
-Requires at least: 5.1
+Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 

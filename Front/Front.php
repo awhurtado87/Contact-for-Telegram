@@ -1,5 +1,4 @@
 <?php
-
 namespace ContactForTelegram;
 
 class Front
@@ -28,7 +27,7 @@ class Front
 
         function register_front_css()
         {
-            wp_enqueue_style('telegram-btn-style', CFTB_PLUGIN_URL . '/front/css/styles.css');
+            wp_enqueue_style('telegram-btn-style', CFTB_PLUGIN_URL . 'Front/css/styles.css');
         }
 
         add_action('wp_enqueue_scripts', 'ContactForTelegram\register_front_css');
@@ -43,7 +42,7 @@ class Front
     {
         function CFTB_render()
         {
-            require_once(CFTB_PLUGIN_DIR . '/front/views/telegram.php');
+            require_once(CFTB_PLUGIN_DIR . 'Front/views/telegram.php');
         }
         add_action('wp_footer', 'ContactForTelegram\CFTB_render');
     }

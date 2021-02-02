@@ -1,6 +1,4 @@
 <?php namespace ContactForTelegram;
-//use Admin;
-//use Front;
 
 /**
  * @package contact-for-telegram
@@ -9,7 +7,7 @@
 Plugin Name: Contact for Telegram
 Plugin URI: https://tupaginawebdesdecero.com/
 Description: Boton sencillo personalizable para enlace directo a usuario o canal de telegram.
-Version: 1.0.0
+Version: 1.0.1
 Author: tupaginawebdesdecero
 Author URI https://tupaginawebdesdecero.com/
 License: GPLv2 or later
@@ -47,7 +45,7 @@ define('CFTB_PLUGIN_URL', plugin_dir_url(__FILE__));
 */
 function CFTB_admin()
 {
-    require_once(CFTB_PLUGIN_DIR . '/Admin/Admin.php');    
+    require_once(CFTB_PLUGIN_DIR . 'Admin/Admin.php');    
     $admin = new Admin;
     
 }
@@ -62,7 +60,7 @@ CFTB_admin();
 function CFTB_front()
 {
 
-    require_once(CFTB_PLUGIN_DIR . '/Front/Front.php');
+    require_once(CFTB_PLUGIN_DIR . 'Front/Front.php');
     $front = new Front;
    
 }

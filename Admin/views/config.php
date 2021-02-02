@@ -34,7 +34,7 @@
                  <th scope="row">Previsualizar</th>
                  <td>
                      <div id="preview" style="width:100px; border-radius:500px;<?php echo "background:" . $color . ""; ?>">
-                         <img style="width:100%;" class="telegram-btn" src=<?php echo "'" . CFTB_PLUGIN_URL . "/Front/img/telegram_icon.png'"; ?>>
+                         <img style="width:100%;" class="telegram-btn" src=<?php echo "'" . CFTB_PLUGIN_URL . "Front/img/telegram_icon.png'"; ?>>
                      </div>
                  </td>
              </tr>

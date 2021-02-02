@@ -33,7 +33,7 @@ class Admin
 
         function admin_register_css()
         {
-            wp_enqueue_style('admin-telegram-btn-style', CFTB_PLUGIN_URL . '/admin/css/styles.css');
+            wp_enqueue_style('admin-telegram-btn-style', CFTB_PLUGIN_URL . 'Admin/css/styles.css');
         }
 
         add_action('admin_enqueue_scripts', 'ContactForTelegram\admin_register_css');
@@ -49,9 +49,9 @@ class Admin
 
         function admin_register_js()
         {
-            wp_enqueue_script('admin-telegram-btn-admin-scripts', CFTB_PLUGIN_URL . '/admin/js/scripts.js');
-            wp_enqueue_script('iris', CFTB_PLUGIN_URL . '/admin/js/iris.min.js');
-            wp_enqueue_script('iris-init', CFTB_PLUGIN_URL . '/admin/js/iris-init.js');
+            wp_enqueue_script('admin-telegram-btn-admin-scripts', CFTB_PLUGIN_URL . 'Admin/js/scripts.js');
+            wp_enqueue_script('iris', CFTB_PLUGIN_URL . 'Admin/js/iris.min.js');
+            wp_enqueue_script('iris-init', CFTB_PLUGIN_URL . 'Admin/js/iris-init.js');
         }
 
         add_action('admin_enqueue_scripts', 'ContactForTelegram\admin_register_js');
@@ -68,12 +68,12 @@ class Admin
 
         function admin_menu_primary()
         {
-            $page_title = 'Telegram Contact';
-            $menu_title = 'Telegram Contact';
+            $page_title = 'Contact for Telegram';
+            $menu_title = 'Contact for Telegram';
             $capability = 'manage_options';
             $menu_slug  = 'telegram-contact-config';
             $function   = 'ContactForTelegram\CFTB_admin_config';
-            $icon_url   = CFTB_PLUGIN_URL . "/admin/img/telegram_icon_menu.png";
+            $icon_url   = CFTB_PLUGIN_URL . "Admin/img/telegram_icon_menu.png";
             $position   = 100;
             add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position);
 
@@ -84,7 +84,7 @@ class Admin
 
         function CFTB_admin_config()
         {
-            require_once(CFTB_PLUGIN_DIR . 'admin/views/config.php');
+            require_once(CFTB_PLUGIN_DIR . 'Admin/views/config.php');
         }
     }
 
@@ -108,7 +108,7 @@ class Admin
             register_setting('telegram-btn-options', 'CFTB_left');
         }
 
-        add_action('admin_init', 'ContactForTelegram\admin_register_options');
+        add_action('admin_init', 'ContactForTelegram\Admin_register_options');
     }
 
     /**
@@ -119,7 +119,7 @@ class Admin
 
     public function CFTB_notification()
     {
-        require_once(CFTB_PLUGIN_DIR . '/admin/Notification.php');
+        require_once(CFTB_PLUGIN_DIR . 'Admin/Notification.php');
         $notification = new Notification;
 
         if (esc_attr(get_option('CFTB_channel')) == "") {

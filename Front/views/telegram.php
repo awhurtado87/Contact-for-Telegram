@@ -62,7 +62,7 @@ if ($channel != '') { ?>
     <div id="telegram-btn" style="<?php echo $posicionamiento . $fondo; ?> ">
 
         <a href="https://t.me/<?php echo $channel ?>" target="_blank">
-            <img class="telegram-btn" src=<?php echo "\"" . CFTB_PLUGIN_URL . "/Front/img/telegram_icon.png\""   ?> alt="">
+            <img class="telegram-btn" src=<?php echo "\"" . CFTB_PLUGIN_URL . "Front/img/telegram_icon.png\""   ?> alt="">
         </a>
     </div>
 
