@@ -7,6 +7,12 @@
         $color = esc_attr(get_option('CFTB_color'));
     }
 
+    if (esc_attr(get_option('CFTB_size')) == "") {
+        $size = 80;
+    } else {
+        $size = esc_attr(get_option('CFTB_size'));
+    }
+
     ?>
 
 
@@ -37,6 +43,11 @@
                          <img style="width:100%;" class="telegram-btn" src=<?php echo "'" . CFTB_PLUGIN_URL . "Front/img/telegram_icon.png'"; ?>>
                      </div>
                  </td>
+             </tr>
+
+             <tr valign="top">
+                 <th scope="row">Tamaño (px)</th>
+                 <td><input type="number" step="1" max="1000" name="CFTB_size" required value="<?php echo $size; ?>" /></td>
              </tr>
 
 

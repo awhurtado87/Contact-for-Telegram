@@ -1,4 +1,5 @@
 <?php
+
 namespace ContactForTelegram;
 
 class Front

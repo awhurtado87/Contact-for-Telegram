@@ -4,6 +4,7 @@ $channel = esc_attr(get_option('CFTB_channel'));
 
 
 $unit = get_option('CFTB_unit');
+$size = get_option('CFTB_size');
 $top = get_option('CFTB_top');
 $bottom = get_option('CFTB_bottom');
 $right = get_option('CFTB_right');
@@ -11,6 +12,7 @@ $left = get_option('CFTB_left');
 $color = get_option('CFTB_color');
 
 
+$size_css = "width:" . $size . "px;"."height:" . $size . "px;";
 $fondo = "background:" . $color . ";";
 
 
@@ -56,10 +58,9 @@ switch ($position) {
 
 <?php
 
-
 if ($channel != '') { ?>
 
-    <div id="telegram-btn" style="<?php echo $posicionamiento . $fondo; ?> ">
+    <div id="telegram-btn" style="<?php echo $posicionamiento . $fondo. $size_css; ?> ">
 
         <a href="https://t.me/<?php echo $channel ?>" target="_blank">
             <img class="telegram-btn" src=<?php echo "\"" . CFTB_PLUGIN_URL . "Front/img/telegram_icon.png\""   ?> alt="">

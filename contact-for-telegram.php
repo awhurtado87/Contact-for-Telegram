@@ -1,4 +1,6 @@
 <?php namespace ContactForTelegram;
+//use Admin;
+//use Front;
 
 /**
  * @package contact-for-telegram
@@ -7,7 +9,7 @@
 Plugin Name: Contact for Telegram
 Plugin URI: https://tupaginawebdesdecero.com/
 Description: Boton sencillo personalizable para enlace directo a usuario o canal de telegram.
-Version: 1.0.1
+Version: 1.0.2
 Author: tupaginawebdesdecero
 Author URI https://tupaginawebdesdecero.com/
 License: GPLv2 or later

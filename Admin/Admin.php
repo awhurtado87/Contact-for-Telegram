@@ -68,12 +68,12 @@ class Admin
 
         function admin_menu_primary()
         {
-            $page_title = 'Contact for Telegram';
-            $menu_title = 'Contact for Telegram';
+            $page_title = 'Telegram Contact';
+            $menu_title = 'Telegram Contact';
             $capability = 'manage_options';
             $menu_slug  = 'telegram-contact-config';
             $function   = 'ContactForTelegram\CFTB_admin_config';
-            $icon_url   = CFTB_PLUGIN_URL . "Admin/img/telegram_icon_menu.png";
+            $icon_url   = CFTB_PLUGIN_URL . "/Admin/img/telegram_icon_menu.png";
             $position   = 100;
             add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position);
 
@@ -100,6 +100,7 @@ class Admin
         {
             register_setting('telegram-btn-options', 'CFTB_channel');
             register_setting('telegram-btn-options', 'CFTB_color');
+            register_setting('telegram-btn-options', 'CFTB_size');
             register_setting('telegram-btn-options', 'CFTB_position');
             register_setting('telegram-btn-options', 'CFTB_unit');
             register_setting('telegram-btn-options', 'CFTB_top');
@@ -108,7 +109,7 @@ class Admin
             register_setting('telegram-btn-options', 'CFTB_left');
         }
 
-        add_action('admin_init', 'ContactForTelegram\Admin_register_options');
+        add_action('admin_init', 'ContactForTelegram\admin_register_options');
     }
 
     /**
